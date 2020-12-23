@@ -1,4 +1,4 @@
-package com.example.testapp.screenhome
+package com.example.testapp.util
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

@@ -3,19 +3,29 @@ package com.example.testapp.screenhome
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.domain.model.Resource
 import com.example.domain.model.TopEmployeeWithSalary200
 import com.example.testapp.R
 import kotlinx.android.synthetic.main.fragment_main.*
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
+@ExperimentalCoroutinesApi
 class HomeFragment : Fragment(R.layout.fragment_main) {
-    private val homeViewModel by viewModel<HomeViewModel>()
+    private val homeViewModel by inject<HomeViewPresenter> {
+        parametersOf(lifecycle)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        homeViewModel.viewState.observe(viewLifecycleOwner) {
-            handleViewState(it)
+        lifecycleScope.launch {
+            homeViewModel.viewState.collect {
+                handleViewState(it)
+            }
         }
         retryButton.setOnClickListener {
             homeViewModel.onViewEvent(HomeViewEvents.Refresh)
