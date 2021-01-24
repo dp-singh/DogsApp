@@ -1,10 +1,10 @@
-package com.example.testapp.screenhome
+package com.example.testapp.features
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.domain.model.Resource
-import com.example.domain.model.TopEmployeeWithSalary200
-import com.example.domain.usecase.GetTopPaidEmployeeUseCase
+import com.example.testapp.features.breedlist.HomeViewEvents
+import com.example.testapp.features.breedlist.HomeViewModel
 import com.google.common.truth.Truth.assertThat
 import io.mockk.coEvery
 import io.mockk.coVerify

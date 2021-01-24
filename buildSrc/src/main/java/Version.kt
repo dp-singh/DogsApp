@@ -1,5 +1,5 @@
 object PluginVersion {
-    const val KOTLIN_VERSION = "1.4.20"
+    const val KOTLIN_VERSION = "1.4.21"
     const val GRADLE_VERSION = "4.1.1"
 
     const val NAV_SAFE_ARGS_VERSION = "2.3.0"
@@ -69,13 +69,6 @@ object Version {
     const val DAGGER_HILT_VERSION = "2.28.1-alpha"
     const val DAGGER_HILT_ANDRIODX = "1.0.0-alpha02"
 
-    // RxJava2
-    const val RX_JAVA2_VERSION = "2.2.19"
-    const val RX_JAVA2_ANDROID_VERSION = "2.1.1"
-
-    // RxJava3
-    const val RX_JAVA3_VERSION = "3.0.0"
-    const val RX_JAVA3_ANDROID_VERSION = "3.0.0"
 
     // Coroutines
     const val COROUTINES_VERSION = "1.3.7"

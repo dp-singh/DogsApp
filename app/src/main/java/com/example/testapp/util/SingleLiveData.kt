@@ -11,7 +11,6 @@ class SingleLiveData<T> : MutableLiveData<T>() {
 
     @MainThread
     override fun observe(owner: LifecycleOwner, observer: Observer<in T>) {
-
         if (hasActiveObservers()) {
             throw IllegalStateException("Multiple observers are registered to a SingleLiveData!")
         }
@@ -26,9 +25,5 @@ class SingleLiveData<T> : MutableLiveData<T>() {
     override fun setValue(value: T) {
         pending.set(true)
         super.setValue(value)
-    }
-
-    companion object {
-        const val TAG = "SingleLiveData"
     }
 }

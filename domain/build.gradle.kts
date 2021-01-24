@@ -2,9 +2,10 @@ import extension.addNetworkModuleDependencies
 import extension.addUnitTestDependencies
 
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
-    id("kotlin-kapt")
+    id(Plugins.ANDROID_LIBRARY_PLUGIN)
+    id(Plugins.KOTLIN_ANDROID_PLUGIN)
+    id(Plugins.KOTLIN_KAPT_PLUGIN)
+    id(Plugins.KOTLIN_ANDROID_PARCELIZE)
 }
 
 android {

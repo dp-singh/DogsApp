@@ -78,6 +78,12 @@ fun DependencyHandler.addNetworkModuleDependencies() {
     kapt(Deps.MOSHI_COMPILER)
 }
 
+fun DependencyHandler.addLocalDbDependencies() {
+    implementation(Deps.ROOM_RUNTIME)
+    kapt(Deps.ROOM_COMPILER)
+    implementation(Deps.ROOM_KTX)
+}
+
 fun DependencyHandler.addRepositoryModuleDependencies() {
     implementation(Deps.KOTLIN)
     // Coroutines
@@ -87,7 +93,6 @@ fun DependencyHandler.addRepositoryModuleDependencies() {
     //Koin
     implementation(Deps.KOIN)
     implementation(Deps.KOIN_CORE)
-
 }
 
 /**

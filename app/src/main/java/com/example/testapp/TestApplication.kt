@@ -1,6 +1,7 @@
 package com.example.testapp
 
 import android.app.Application
+import com.example.data.di.dbModule
 import com.example.data.di.httpModule
 import com.example.domain.di.useCaseModule
 import com.example.testapp.di.viewModelModule
@@ -20,7 +21,7 @@ class TestApplication : Application() {
                 logger(AndroidLogger())
             }
             androidContext(applicationContext)
-            modules(httpModule + viewModelModule + useCaseModule)
+            modules(httpModule + viewModelModule + useCaseModule + dbModule)
         }
     }
 }

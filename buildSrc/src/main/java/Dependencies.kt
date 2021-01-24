@@ -88,6 +88,15 @@ object Deps {
     const val KOIN_CORE = "org.koin:koin-core:${Version.KOIN}"
     const val KOIN_VIEW_MODEL = "org.koin:koin-androidx-viewmodel:${Version.KOIN}"
     const val KOIN_ANDROIDX_SCOPE = "org.koin:koin-androidx-scope:${Version.KOIN}"
+
+    // Room
+    const val ROOM_RUNTIME = "androidx.room:room-runtime:${Version.ROOM_VERSION}"
+
+    // For Kotlin use kapt instead of annotationProcessor
+    const val ROOM_COMPILER = "androidx.room:room-compiler:${Version.ROOM_VERSION}"
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    const val ROOM_KTX = "androidx.room:room-ktx:${Version.ROOM_VERSION}"
 }
 
 object TestDeps {

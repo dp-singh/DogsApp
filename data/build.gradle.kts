@@ -1,4 +1,5 @@
 import extension.addNetworkModuleDependencies
+import extension.addLocalDbDependencies
 import extension.addUnitTestDependencies
 
 plugins {
@@ -25,5 +26,6 @@ android {
 
 dependencies {
     addNetworkModuleDependencies()
+    addLocalDbDependencies()
     addUnitTestDependencies()
 }

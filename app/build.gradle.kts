@@ -3,10 +3,11 @@ import extension.addInstrumentationTestDependencies
 import extension.addUnitTestDependencies
 
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-kapt")
-    id("kotlin-android-extensions")
+    id(Plugins.ANDROID_APPLICATION_PLUGIN)
+    id(Plugins.KOTLIN_ANDROID_PLUGIN)
+    id(Plugins.KOTLIN_KAPT_PLUGIN)
+    id(Plugins.NAVIGATION_SAFE_ARGS)
+    id(Plugins.KOTLIN_ANDROID_PARCELIZE)
 }
 android {
     compileSdkVersion(AndroidVersion.COMPILE_SDK_VERSION)
@@ -45,9 +46,6 @@ android {
             java.srcDir(sharedTestDir)
         }
     }
-    androidExtensions {
-        isExperimental = true
-    }
     buildTypes {
         getByName("release") {
             minifyEnabled(false)
@@ -63,6 +61,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 

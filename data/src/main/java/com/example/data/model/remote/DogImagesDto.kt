@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class EmployeeResponse(
-    @Json(name = "data")
-    val listOfEmployeeDto: List<EmployeeDTO>
+data class DogImagesDto(
+    @Json(name = "message")
+    val photoList: List<String>
 )

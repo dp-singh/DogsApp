@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <action
+        android:id="@+id/actionProvideDogTypePhotosFragment"
+        app:destination="@id/dogTypePhotosFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.testapp.features.breedlist.HomeFragment"
+        android:label="@string/title_dog_type_list"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/dogTypePhotosFragment"
+        android:name="com.example.testapp.features.breeddetails.DogTypePhotosFragment"
+        android:label="Photos Fragment"
+        tools:layout="@layout/fragment_dog_type_photos">
+        <argument
+            android:name="dogType"
+            app:argType="com.example.domain.model.DogType" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://dog.ceo/dog-api/" />
+    </fragment>
+</navigation>
