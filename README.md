@@ -12,6 +12,12 @@ Unit test cases are covered for the following classes.
 - [x] ViewModel.
 - [x] UseCases.
 
+## Screenshots
+
+| List Of Breeds Screen | Dog Breed Photos |
+|--------|-------|
+|<img src="https://github.com/dp-singh/DogsApp/blob/main/screenshots/Screenshot_20210126_223043.png" width="320"/>|<img src="https://github.com/dp-singh/DogsApp/blob/main/screenshots/Screenshot_20210126_223052.png" width="320"/>|
+
 ## Overview
 * Gradle Kotlin DSL is used for setting up gradle files with `buildSrc` folder and extensions.
 * Data module uses Retrofit and Room to provide Local and Remote data sources
