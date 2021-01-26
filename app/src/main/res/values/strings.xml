@@ -4,5 +4,11 @@
     <string name="title_dog_breed_photos">%s %s</string>
     <string name="text_refresh">Refresh</string>
     <string name="try_again">Try Again</string>
-    <string name="errorText">Some went wrong, please try again.</string>
+
+    <string name="unknown_error">Some went wrong, please try again.</string>
+    <string name="unauthorized_error">User not authorized.</string>
+    <string name="forbidden_error">User is forbidden.</string>
+    <string name="not_found_error">Request not found.</string>
+    <string name="server_error">Server error, please try again.</string>
+    <string name="network_error">Internet not available, please connect and try again </string>
 </resources>

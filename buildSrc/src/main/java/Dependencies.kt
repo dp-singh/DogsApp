@@ -146,5 +146,9 @@ object TestDeps {
         "androidx.navigation:navigation-testing:${Version.NAVIGATION_VERSION}"
     const val KOIN_TEST="org.koin:koin-test:${Version.KOIN}"
 
+    //Fixture generator
+
+    const val K_FIXTURE="com.appmattus.fixture:fixture:${Version.K_FIXTURE}"
+
 }
 

@@ -1,4 +1,4 @@
 include(":app")
-rootProject.name = "TestApp"
+rootProject.name = "DogsApp"
 include(":data")
 include(":domain")

@@ -88,9 +88,6 @@ object Version {
     // Timber
     const val TIMBER_VERSION = "4.7.1"
 
-    // Chucker
-    const val CHUCKER_VERSION = "3.4.0"
-
     // Leak Canary
     const val LEAK_CANARY_VERSION = "2.4"
 
@@ -99,6 +96,8 @@ object Version {
 
     //KOIN
     const val KOIN = "2.2.0"
+
+    const val K_FIXTURE = "1.0.0"
 
 }
 

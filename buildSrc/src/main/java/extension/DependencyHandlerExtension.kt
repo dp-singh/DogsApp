@@ -124,7 +124,10 @@ fun DependencyHandler.addUnitTestDependencies() {
     testImplementation(TestDeps.MOCK_K)
     // Truth
     testImplementation(TestDeps.TRUTH)
+    //KOIN
     testImplementation(TestDeps.KOIN_TEST)
+    //KFixture
+    testImplementation(TestDeps.K_FIXTURE)
 }
 
 fun DependencyHandler.addInstrumentationTestDependencies() {
@@ -151,6 +154,7 @@ fun DependencyHandler.addInstrumentationTestDependencies() {
     androidTestImplementation(TestDeps.MOCK_K)
     // Truth
     androidTestImplementation(TestDeps.TRUTH)
+    androidTestImplementation(TestDeps.K_FIXTURE)
 }
 
 /*

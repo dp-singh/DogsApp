@@ -11,19 +11,16 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.testapp.features.breedlist.HomeFragment"
+        android:name="com.dog.app.features.dog.list.DogListFragment"
         android:label="@string/title_dog_type_list"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/dogTypePhotosFragment"
-        android:name="com.example.testapp.features.breeddetails.DogTypePhotosFragment"
+        android:name="com.dog.app.features.dog.photos.DogPhotosFragment"
         android:label="Photos Fragment"
         tools:layout="@layout/fragment_dog_type_photos">
         <argument
-            android:name="dogType"
-            app:argType="com.example.domain.model.DogType" />
-        <deepLink
-            android:id="@+id/deepLink"
-            app:uri="https://dog.ceo/dog-api/" />
+            android:name="dog"
+            app:argType="com.dog.domain.model.Dog" />
     </fragment>
 </navigation>
