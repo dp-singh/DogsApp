@@ -1,4 +1,4 @@
-### Sample App with MVVM Clean Architecture Coroutines, Koin, Jetpack Libs
+### Dog breed and photos App
 
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.4.20-blue.svg)](https://kotlinlang.org)
@@ -6,8 +6,11 @@
 
 ## About
 
-Sample project that build with MVVM clean architecture 
-Unit tests are written with JUnit4, MockK, Truth, MockWebServer. Data, Domain, and ViewModel tests.
+App is build with MVVM Clean Architecture with Coroutines, Koin, Jetpack Libs. Unit tests are written with JUnit4, MockK, Truth.
+
+Unit test cases are covered for the following classes.
+- [x] ViewModel.
+- [x] UseCases.
 
 ## Overview
 * Gradle Kotlin DSL is used for setting up gradle files with `buildSrc` folder and extensions.
