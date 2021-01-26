@@ -9,17 +9,34 @@ import com.google.common.truth.Truth.assertThat
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.setMain
+import org.junit.After
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.koin.test.AutoCloseKoinTest
 import java.util.concurrent.CancellationException
 
+@ExperimentalCoroutinesApi
 class DogPhotosViewModelTest : AutoCloseKoinTest() {
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
     private val mockGetDogPhotosUseCase: GetDogPhotosUseCase = mockk()
 
     private val fixture = kotlinFixture()
+
+    @Before
+    fun setup() {
+        Dispatchers.setMain(Dispatchers.Unconfined)
+    }
+
+    @After
+    fun tearDown() {
+        Dispatchers.resetMain()
+    }
 
     @Test
     fun `Given vm initialised When dog photos return success Then ViewState should be success`() {

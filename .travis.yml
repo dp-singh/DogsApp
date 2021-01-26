@@ -1,0 +1,26 @@
+sudo: required
+
+language: android
+
+jdk: oraclejdk8
+
+before_install:
+  - yes | sdkmanager "platforms;android-30"
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - build-tools-29.0.3
+    - android-30
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - extra-android-support
+
+
+script:
+  - ./gradlew assembleDebug
+  - ./gradlew check
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -1,5 +1,6 @@
 ### Dog breed and photos App
 
+[![Build Status](https://travis-ci.com/dp-singh/DogsApp.svg?branch=main)](https://travis-ci.com/dp-singh/DogsApp)
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.4.20-blue.svg)](https://kotlinlang.org)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=30)
